@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-01-15T13:26:14.305617",
+  "datasets": {
+    "state_summary": {
+      "records": 60,
+      "columns": [
+        "state",
+        "demo_child",
+        "demo_adult",
+        "bio_child",
+        "bio_adult",
+        "enrol_infant",
+        "enrol_child",
+        "enrol_adult"
+      ],
+      "description": "State-level aggregated metrics"
+    },
+    "district_summary": {
+      "records": 1105,
+      "columns": [
+        "state",
+        "district",
+        "demo_child",
+        "demo_adult",
+        "bio_child",
+        "bio_adult",
+        "enrol_infant",
+        "enrol_child",
+        "enrol_adult"
+      ],
+      "description": "District-level aggregated metrics"
+    },
+    "monthly_summary": {
+      "records": 12200,
+      "columns": [
+        "state",
+        "district",
+        "month",
+        "demo_child",
+        "demo_adult",
+        "bio_child",
+        "bio_adult",
+        "enrol_infant",
+        "enrol_child",
+        "enrol_adult"
+      ],
+      "description": "Monthly time-series by district"
+    },
+    "district_daily": {
+      "records": 39544,
+      "columns": [
+        "date",
+        "state",
+        "district",
+        "demo_child",
+        "demo_adult",
+        "bio_child",
+        "bio_adult",
+        "enrol_infant",
+        "enrol_child",
+        "enrol_adult",
+        "month"
+      ],
+      "description": "Daily district-level data (sampled if >50k records)"
+    }
+  },
+  "date_range": {
+    "start": "2025-01-03T00:00:00",
+    "end": "2025-12-12T00:00:00"
+  },
+  "coverage": {
+    "states": 60,
+    "districts": 1005,
+    "total_records": 39544
+  }
+}
