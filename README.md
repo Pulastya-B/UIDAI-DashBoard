@@ -13,7 +13,7 @@ This is a **production-ready hackathon submission** that combines:
 - **30+ visualizations** powered by Plotly, Recharts, and custom D3.js components
 - **Zero backend** - all Python runs in browser via WebAssembly (Pyodide)
 
-### 🏆 Key Jury-Winning Features
+### 🏆 Key Features
 
 1. **Threat Intelligence** - Composite risk scoring across 4 dimensions (BAI, GFI, DPI, CCI)
 2. **Policy Shock Simulator** - Before/after analysis of major policy events
