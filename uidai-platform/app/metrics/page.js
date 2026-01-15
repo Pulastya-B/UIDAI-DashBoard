@@ -103,7 +103,7 @@ export default function MetricsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black flex items-center justify-center">
         <LoadingSpinner text="Loading data..." />
       </div>
     );
@@ -111,7 +111,7 @@ export default function MetricsPage() {
 
   if (!data) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-400 font-bold text-xl mb-2">Failed to load data</p>
           <p className="text-gray-400">Please ensure data files are in public/data/</p>
@@ -121,7 +121,7 @@ export default function MetricsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-12 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black py-12 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>

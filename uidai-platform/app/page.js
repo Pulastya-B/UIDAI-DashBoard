@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Database, BarChart3, Shield, TrendingUp, MapPin, AlertTriangle, Sparkles } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import SkewCards from '@/components/SkewCards';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -73,6 +74,19 @@ export default function Home() {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Skew Cards Section */}
+      <section className="container mx-auto px-4 py-12 relative z-10">
+        <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+            Explore Key Features
+          </h2>
+          <p className="text-center text-gray-400 mb-8 text-lg">
+            Interactive tools for data-driven insights
+          </p>
+          <SkewCards />
         </div>
       </section>
 
@@ -145,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* Dataset Overview */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-black via-gray-950 to-black py-20 relative overflow-hidden">
         {/* Animated grid background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{

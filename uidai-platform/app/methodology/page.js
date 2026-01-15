@@ -4,7 +4,7 @@ import { BookOpen, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 export default function MethodologyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-teal-900 to-gray-900 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black py-12">
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Header */}
         <div className="text-center mb-12">

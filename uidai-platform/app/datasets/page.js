@@ -5,26 +5,26 @@ import { Download, Eye, Info } from 'lucide-react';
 
 export default function DatasetsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black py-12">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-100 mb-4">
             UIDAI Datasets
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-300">
             All analyses are based on these three public UIDAI datasets. 
             View samples, understand structures, download originals.
           </p>
         </div>
 
         {/* Transparency Badge */}
-        <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-12 max-w-4xl mx-auto">
+        <div className="bg-cyan-900/20 border-l-4 border-cyan-500 p-6 mb-12 max-w-4xl mx-auto backdrop-blur-sm">
           <div className="flex items-start gap-3">
-            <Info className="text-blue-600 flex-shrink-0 mt-1" />
+            <Info className="text-cyan-400 flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-bold text-blue-900 mb-2">Transparency Commitment</h3>
-              <p className="text-blue-800 text-sm">
+              <h3 className="font-bold text-cyan-300 mb-2">Transparency Commitment</h3>
+              <p className="text-gray-300 text-sm">
                 <strong>No data manipulation.</strong> These are the original UIDAI datasets 
                 provided for the hackathon. Every insight in our analysis is derived from these sources. 
                 You can download and verify every claim yourself.
@@ -86,8 +86,8 @@ export default function DatasetsPage() {
         </div>
 
         {/* Metadata Section */}
-        <div className="mt-12 bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6">Dataset Coverage</h2>
+        <div className="mt-12 bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg shadow-cyan-500/10 p-8 max-w-4xl mx-auto border border-gray-800">
+          <h2 className="text-2xl font-bold mb-6 text-gray-100">Dataset Coverage</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
             <MetadataCard
@@ -107,9 +107,9 @@ export default function DatasetsPage() {
             />
           </div>
 
-          <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-            <h3 className="font-bold mb-2">Data Quality Notes:</h3>
-            <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <div className="mt-8 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="font-bold mb-2 text-cyan-400">Data Quality Notes:</h3>
+            <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
               <li>Date format: DD-MM-YYYY (strictly validated)</li>
               <li>Negative values: None (all counts are non-negative integers)</li>
               <li>Missing values: Less than 2% (handled via standardization)</li>
@@ -119,10 +119,10 @@ export default function DatasetsPage() {
         </div>
 
         {/* How We Use This Data */}
-        <div className="mt-12 bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl p-8 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4">How We Use This Data</h2>
-          <p className="text-gray-700 mb-6">
-            These three datasets are merged at the <strong>(Date, State, District, Pincode)</strong> level 
+        <div className="mt-12 bg-gradient-to-r from-cyan-900/30 to-teal-900/30 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto border border-cyan-800/30">
+          <h2 className="text-2xl font-bold mb-4 text-gray-100">How We Use This Data</h2>
+          <p className="text-gray-300 mb-6">
+            These three datasets are merged at the <strong className="text-cyan-400">(Date, State, District, Pincode)</strong> level 
             to create our master analytical dataset. From there:
           </p>
           
@@ -152,7 +152,7 @@ export default function DatasetsPage() {
           <div className="mt-6 text-center">
             <Link 
               href="/metrics" 
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+              className="inline-flex items-center gap-2 bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition shadow-lg shadow-cyan-500/30"
             >
               Explore Metrics →
             </Link>
@@ -165,7 +165,7 @@ export default function DatasetsPage() {
 
 function DatasetCard({ title, description, columns, coverage, sampleFile, downloadFile }) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg shadow-cyan-500/10 overflow-hidden border border-gray-800 hover:border-gray-700 transition-all">
       <div className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white p-6">
         <h2 className="text-2xl font-bold mb-2">{title}</h2>
         <p className="text-blue-100">{description}</p>
@@ -174,18 +174,18 @@ function DatasetCard({ title, description, columns, coverage, sampleFile, downlo
       <div className="p-6">
         {/* Coverage */}
         <div className="mb-6">
-          <h3 className="font-semibold text-gray-900 mb-2">Coverage:</h3>
-          <p className="text-gray-600">{coverage}</p>
+          <h3 className="font-semibold text-gray-100 mb-2">Coverage:</h3>
+          <p className="text-gray-300">{coverage}</p>
         </div>
 
         {/* Columns */}
         <div className="mb-6">
-          <h3 className="font-semibold text-gray-900 mb-2">Columns:</h3>
+          <h3 className="font-semibold text-gray-100 mb-2">Columns:</h3>
           <div className="flex flex-wrap gap-2">
             {columns.map((col, idx) => (
               <span 
                 key={idx}
-                className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
+                className="bg-gray-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium border border-gray-700"
               >
                 {col}
               </span>
@@ -200,7 +200,7 @@ function DatasetCard({ title, description, columns, coverage, sampleFile, downlo
               // Open state summary in new tab
               window.open('/data/state_summary.json', '_blank');
             }}
-            className="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-100 transition"
+            className="flex items-center gap-2 bg-cyan-900/30 text-cyan-400 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-900/50 transition border border-cyan-800/50"
           >
             <Eye size={18} />
             View Processed Data
@@ -214,7 +214,7 @@ function DatasetCard({ title, description, columns, coverage, sampleFile, downlo
               link.download = 'district_summary.json';
               link.click();
             }}
-            className="flex items-center gap-2 bg-green-50 text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-green-100 transition"
+            className="flex items-center gap-2 bg-teal-900/30 text-teal-400 px-4 py-2 rounded-lg font-semibold hover:bg-teal-900/50 transition border border-teal-800/50"
           >
             <Download size={18} />
             Download JSON Summary
@@ -228,22 +228,22 @@ function DatasetCard({ title, description, columns, coverage, sampleFile, downlo
 function MetadataCard({ label, value, description }) {
   return (
     <div className="text-center">
-      <div className="text-3xl font-bold text-blue-600 mb-1">{value}</div>
-      <div className="font-semibold text-gray-900 mb-1">{label}</div>
-      <div className="text-sm text-gray-600">{description}</div>
+      <div className="text-3xl font-bold text-cyan-400 mb-1">{value}</div>
+      <div className="font-semibold text-gray-100 mb-1">{label}</div>
+      <div className="text-sm text-gray-400">{description}</div>
     </div>
   );
 }
 
 function ProcessStep({ number, title, description }) {
   return (
-    <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
-      <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+    <div className="flex items-start gap-3 bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
+      <div className="flex-shrink-0 w-8 h-8 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg shadow-cyan-500/30">
         {number}
       </div>
       <div>
-        <h4 className="font-bold text-gray-900 mb-1">{title}</h4>
-        <p className="text-sm text-gray-600">{description}</p>
+        <h4 className="font-bold text-gray-100 mb-1">{title}</h4>
+        <p className="text-sm text-gray-400">{description}</p>
       </div>
     </div>
   );
