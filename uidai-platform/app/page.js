@@ -28,48 +28,45 @@ export default function Home() {
             <Sparkles size={16} />
             <span className="text-sm font-semibold">Interactive Research Platform</span>
           </div>
-          
-          <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6 leading-tight">
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6 leading-tight">
             UIDAI Analytical Platform
           </h1>
-          <p className="text-2xl text-gray-200 mb-4 font-medium">
+          <p className="text-xl sm:text-2xl text-gray-200 mb-4 font-medium">
             An Interactive Research Sandbox for Aadhaar Flow Data
           </p>
-          <p className="text-lg text-gray-400 mb-8 flex items-center justify-center gap-3">
+          <p className="text-base sm:text-lg text-gray-400 mb-8 flex items-center justify-center gap-3 flex-wrap">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></span>
             Transparent • Reproducible • Testable
           </p>
-          
-          <div className="bg-gradient-to-r from-gray-800/80 to-gray-800/60 border-l-4 border-gradient-to-b from-cyan-500 to-teal-500 p-8 mb-10 text-left rounded-r-2xl shadow-2xl backdrop-blur-sm transform hover:scale-[1.02] transition-transform">
-            <p className="text-gray-200 leading-relaxed text-lg">
+
+          <div className="bg-gradient-to-r from-gray-800/80 to-gray-800/60 border-l-4 border-gradient-to-b from-cyan-500 to-teal-500 p-4 sm:p-6 md:p-8 mb-10 text-left rounded-r-2xl shadow-2xl backdrop-blur-sm transform hover:scale-[1.02] transition-transform">
+            <p className="text-gray-200 leading-relaxed text-base sm:text-lg">
               <strong className="text-blue-400">Not a dashboard.</strong> This is a reproducible research lab built on UIDAI's public datasets. 
               Explore the raw data, inspect our calculations, adjust assumptions, and watch patterns emerge. 
               Every metric is transparent. Every insight is testable. Every conclusion is auditable.
             </p>
           </div>
 
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link 
-              href="/datasets" 
-              className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
-            >
-              <Database size={20} />
+          <div className="flex gap-3 sm:gap-4 justify-center flex-wrap">
+            <Link
+              href="/datasets"
+              className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center gap-2 text-sm sm:text-base">
+              <Database size={18} className="sm:w-5 sm:h-5" />
               View Datasets
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
-            <Link 
-              href="/metrics" 
-              className="group bg-white text-teal-600 border-2 border-teal-600 px-8 py-4 rounded-xl font-semibold hover:bg-teal-50 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
-            >
-              <BarChart3 size={20} />
+            <Link
+              href="/metrics"
+              className="group bg-white text-teal-600 border-2 border-teal-600 px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-teal-50 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center gap-2 text-sm sm:text-base">
+              <BarChart3 size={18} className="sm:w-5 sm:h-5" />
               Explore Metrics
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
-            <Link 
-              href="/threat-intelligence" 
-              className="group bg-gradient-to-r from-red-600 to-rose-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-red-700 hover:to-rose-700 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center gap-2 animate-pulse"
-            >
-              <AlertTriangle size={20} />
+            <Link
+              href="/threat-intelligence"
+              className="group bg-gradient-to-r from-red-600 to-rose-600 text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:from-red-700 hover:to-rose-700 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center gap-2 animate-pulse text-sm sm:text-base">
+              <AlertTriangle size={18} className="sm:w-5 sm:h-5" />
               National Threat Map
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -80,10 +77,10 @@ export default function Home() {
       {/* Skew Cards Section */}
       <section className="container mx-auto px-4 py-12 relative z-10">
         <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
             Explore Key Features
           </h2>
-          <p className="text-center text-gray-400 mb-8 text-lg">
+          <p className="text-center text-gray-400 mb-8 text-base sm:text-lg">
             Interactive tools for data-driven insights
           </p>
           <SkewCards />
@@ -93,10 +90,10 @@ export default function Home() {
       {/* Key Features */}
       <section className="container mx-auto px-4 py-20 relative z-10">
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Platform Features
           </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
+          <p className="text-center text-gray-400 mb-12 text-base sm:text-lg">
             Explore powerful analytical tools and insights
           </p>
           
@@ -167,12 +164,12 @@ export default function Home() {
             backgroundSize: '50px 50px'
           }}></div>
         </div>
-        
+
         <div className={`container mx-auto px-4 relative z-10 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl font-bold text-center mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-white">
             Data Coverage
           </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
+          <p className="text-center text-gray-400 mb-12 text-base sm:text-lg">
             Comprehensive nationwide analysis
           </p>
           
@@ -202,10 +199,10 @@ export default function Home() {
       {/* Methodology */}
       <section className="container mx-auto px-4 py-20 relative z-10">
         <div className={`max-w-3xl mx-auto transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Our Approach
           </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
+          <p className="text-center text-gray-400 mb-12 text-base sm:text-lg">
             Built on transparency and reproducibility
           </p>
           
@@ -235,12 +232,10 @@ export default function Home() {
               color="from-orange-500 to-red-500"
             />
           </div>
-
-          <div className="text-center mt-12">
-            <Link 
-              href="/methodology" 
-              className="group inline-flex items-center gap-2 text-cyan-400 font-semibold hover:text-teal-400 transition-colors text-lg"
-            >
+          <div className="text-center mt-8 sm:mt-12">
+            <Link
+              href="/methodology"
+              className="group inline-flex items-center gap-2 text-cyan-400 font-semibold hover:text-teal-400 transition-colors text-base sm:text-lg">
               Read Full Methodology & Ethics 
               <span className="group-hover:translate-x-2 transition-transform">→</span>
             </Link>
@@ -254,15 +249,15 @@ export default function Home() {
 function FeatureCard({ icon, title, description, link, gradient, delay }) {
   return (
     <Link href={link}>
-      <div className={`group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500 cursor-pointer h-full border border-gray-700 hover:border-cyan-500/50 hover:-translate-y-2 ${delay} animate-fade-in-up`}>
-        <div className={`mb-6 inline-block p-4 rounded-xl bg-gradient-to-br ${gradient} text-white transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+      <div className={`group bg-gray-800/50 backdrop-blur-sm p-5 sm:p-6 md:p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500 cursor-pointer h-full border border-gray-700 hover:border-cyan-500/50 hover:-translate-y-2 ${delay} animate-fade-in-up`}>
+        <div className={`mb-4 sm:mb-6 inline-block p-3 sm:p-4 rounded-xl bg-gradient-to-br ${gradient} text-white transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
           {icon}
         </div>
-        <h3 className="text-xl font-bold mb-3 text-gray-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-cyan-400 group-hover:to-teal-400 transition-all">
+        <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-cyan-400 group-hover:to-teal-400 transition-all">
           {title}
         </h3>
-        <p className="text-gray-400 leading-relaxed">{description}</p>
-        <div className="mt-4 flex items-center text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">{description}</p>
+        <div className="mt-3 sm:mt-4 flex items-center text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity text-sm sm:text-base">
           Explore <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
         </div>
       </div>
@@ -272,27 +267,27 @@ function FeatureCard({ icon, title, description, link, gradient, delay }) {
 
 function StatCard({ number, label, sublabel, delay }) {
   return (
-    <div className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-2xl shadow-2xl text-center border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/20 ${delay} animate-fade-in-up`}>
-      <div className="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent mb-3 animate-pulse">
+    <div className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-5 sm:p-6 md:p-8 rounded-2xl shadow-2xl text-center border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/20 ${delay} animate-fade-in-up`}>
+      <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent mb-2 sm:mb-3 animate-pulse">
         {number}
       </div>
-      <div className="text-xl font-semibold text-white mb-2">{label}</div>
-      <div className="text-sm text-gray-400">{sublabel}</div>
+      <div className="text-lg sm:text-xl font-semibold text-white mb-1 sm:mb-2">{label}</div>
+      <div className="text-xs sm:text-sm text-gray-400">{sublabel}</div>
     </div>
   );
 }
 
 function MethodologyStep({ number, title, description, color }) {
   return (
-    <div className="group flex gap-6 p-6 bg-gray-800/40 backdrop-blur-sm rounded-2xl hover:bg-gray-800/60 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 border border-gray-700 hover:border-gray-600">
-      <div className={`flex-shrink-0 w-14 h-14 bg-gradient-to-br ${color} text-white rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+    <div className="group flex gap-4 sm:gap-6 p-4 sm:p-5 md:p-6 bg-gray-800/40 backdrop-blur-sm rounded-2xl hover:bg-gray-800/60 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 border border-gray-700 hover:border-gray-600">
+      <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br ${color} text-white rounded-2xl flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
         {number}
       </div>
       <div>
-        <h3 className="font-bold text-xl mb-2 text-gray-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-cyan-400 group-hover:to-teal-400 transition-all">
+        <h3 className="font-bold text-lg sm:text-xl mb-1 sm:mb-2 text-gray-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-cyan-400 group-hover:to-teal-400 transition-all">
           {title}
         </h3>
-        <p className="text-gray-400 leading-relaxed">{description}</p>
+        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">{description}</p>
       </div>
     </div>
   );

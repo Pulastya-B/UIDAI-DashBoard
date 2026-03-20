@@ -10,6 +10,11 @@ export const metadata = {
   description: 'Transparent, reproducible analysis of Aadhaar enrolment and update patterns using UIDAI public datasets',
   keywords: 'UIDAI, Aadhaar, Data Analysis, Policy Research, Border Security, Migration, Infrastructure',
   authors: [{ name: 'Your Team Name' }],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     title: 'UIDAI Analytical Platform',
     description: 'Interactive analytical sandbox for exploring Aadhaar flow patterns',
